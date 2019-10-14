@@ -317,6 +317,28 @@ header {
   color: #256a9f;
 }
 
+.element-seguimiento-chart{
+  align-self: center;
+}
+
+.element-seguimiento-pdf button{
+  border: none;
+  border-radius: 50px;
+  background: #00ccff;
+  color: #fff;
+  margin-left: 2%;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.element-seguimiento-pdf {
+  align-self: center;
+}    
+
+.element-seguimiento-pdf button:hover{
+  color: #256a9f;
+}
+
 .chart-container{
   width: 400px;
   height: 400px;

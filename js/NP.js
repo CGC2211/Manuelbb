@@ -66,11 +66,28 @@ function generargrafica(){
                     text: 'Seguimiento de Peso' 
                   },
             legend: {
-                position : 'bottom'
-            }
+                display: false
+              }
             }
     });
-
-    console.log(dataArray);
-
 }   
+
+function generarpdf(){
+   var doc = new jsPDF();
+   var canvas = document.getElementById('myChart');
+   var imgData = canvas.toDataURL("image/PNG", 1.0);
+   var elementHTML = $('#Seguimiento').html();
+   var specialElementHandlres = {
+    '#elementH': function(element, renderer){
+      return true;
+    }
+   }
+
+   doc.fromHTML(elementHTML, 15, 15,{
+      'width': 170,
+      'elementHandlers': specialElementHandlres
+   });
+   doc.addImage(imgData, 'JPEG', 10, 0);
+
+   doc.save('paciente.pdf');
+}
