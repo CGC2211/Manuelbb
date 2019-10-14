@@ -7,26 +7,25 @@
 		<link type="text/css" href="css/NP.css" rel="stylesheet">
 		<script src="js/jquery.js" type="text/javascript"></script>
 		<script src="js/NP.js" type="text/javascript"></script>
-		<!--<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
-		<script src="js/jquery.js" type="text/javascript"></script>
-		<script src="js/bootstrap.min.js" type="text/javascript"></script>-->
+		
+		<!--ChartJS-->
+		<script src="https://cdnjs.com/libraries/Chart.js" type="text/javascript"></script>
 	</head>
 	<body>
-	<nav>
-		  <ul class="menu">
-		    <li class="logo"><a href="#">Invisible App</a></li>
-		    <li class="item"><a href="#">Nuevo Paciente</a></li>
-		    <li class="item"><a href="#">Seguimiento</a></li>
-		    <li class="item"><a href="#">Informe</a></li>
-		    <!--<li class="item"><a href="#">Features</a></li>
-		    <li class="item"><a href="#">Blog</a></li>
-		    <li class="item"><a href="#">Contact</a>
-		    </li>
-		    <li class="item button"><a href="#">Log In</a></li>
-		    <li class="item button secondary"><a href="#">Sign Up</a></li>-->
-		    <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
-		  </ul>
-		</nav> 
+		
+		<header>
+			<img class="logo" src="images/logo.jpg" alt="logo">
+			<nav>
+				<ul class="nav-links">
+					<li><a href="#">Nuevo Paciente</a></li>
+					<li><a href="#">Seguimiento</a></li>
+					<li><a href="#">Informe</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+
+
 		<div id="container">
 			<div id="generales">
 				<h1>Datos Generales</h1>
@@ -168,12 +167,135 @@
 					</div>		
 					<div class="element-deportista-submit">
 						<button id="btnsnddeportista" type="button"> Enviar</button>	
-					</div>
-					
+					</div>	
 			</div>
-
 		</div>
 		
+		<div id="Seguimiento">
+			<div class="element-seguimiento-search">
+				<input type="text" id="inputsearch" placeholder="Ingrese Nombre del paciente"><button onclick="searchpaciente()">Buscar</button>
+			</div>
+			<div class="element-seguimiento-result">
+				<div class="valores-result">
+					<ul class="tabla-column">
+						<li class="tabla-head">Bicep</li>
+						<li class="tabla-row" >2.25</li>
+						<li class="tabla-row">3</li>
+						<li class="tabla-row">4</li>
+						<li class="tabla-row">5</li>
+					</ul>
+				</div>
+				<div class="valores-result">
+					<ul class="tabla-column">
+						<li class="tabla-head">Tricep</li>
+						<li class="tabla-row">12</li>
+						<li class="tabla-row">13</li>
+						<li class="tabla-row">14</li>
+						<li class="tabla-row">15</li>
+					</ul>
+				</div>
+				<div class="valores-result">
+					<ul class="tabla-column">
+						<li class="tabla-head">Subescapular</li>
+						<li class="tabla-row">6</li>
+						<li class="tabla-row">7</li>
+						<li class="tabla-row">8</li>
+						<li class="tabla-row">9</li>
+					</ul>
+				</div>
+				<div class="valores-result">
+					<ul class="tabla-column">
+						<li class="tabla-head">Cresta iliaca</li>
+						<li class="tabla-row">10</li>
+						<li class="tabla-row">11</li>
+						<li class="tabla-row">12</li>
+						<li class="tabla-row">12</li>
+					</ul>
+				</div>
+				<div class="valores-result">
+					<ul class="tabla-column">
+						<li class="tabla-head">Supra-espinoso</li>
+						<li class="tabla-row">7.75</li>
+						<li class="tabla-row">8</li>
+						<li class="tabla-row">8</li>
+						<li class="tabla-row">8.6</li>
+					</ul>
+				</div>
+				<div class="valores-result">
+					<ul class="tabla-column">
+						<li class="tabla-head">Abdominal</li>
+						<li class="tabla-row">13</li>
+						<li class="tabla-row">14</li>
+						<li class="tabla-row">14.5</li>
+						<li class="tabla-row">15</li>
+					</ul>
+				</div>
+				<div class="valores-result">
+					<ul class="tabla-column">
+						<li class="tabla-head">Muslo medio</li>
+						<li class="tabla-row">12.75</li>
+						<li class="tabla-row">13</li>
+						<li class="tabla-row">13</li>
+						<li class="tabla-row">14.5</li>
+					</ul>
+				</div>
+				<div class="valores-result">
+					<ul class="tabla-column">
+						<li class="tabla-head">Pantorilla</li>
+						<li class="tabla-row">7</li>
+						<li class="tabla-row">8</li>
+						<li class="tabla-row">8.7</li>
+						<li class="tabla-row">9.1</li>
+					</ul>
+				</div>
+				<div class="valores-result">
+					<ul class="tabla-column">
+						<li class="tabla-head">Cintura mínima</li>
+						<li class="tabla-row">69.25</li>
+						<li class="tabla-row">70</li>
+						<li class="tabla-row">70</li>
+						<li class="tabla-row">71</li>
+					</ul>
+				</div>
+				<div class="valores-result">
+					<ul class="tabla-column">
+						<li class="tabla-head">Cadera máxima</li>
+						<li class="tabla-row">97</li>
+						<li class="tabla-row">100</li>
+						<li class="tabla-row">100</li>
+						<li class="tabla-row">100</li>
+					</ul>
+				</div>
+				<div class="valores-result">
+					<ul class="tabla-column">
+						<li class="tabla-head">Pantorilla</li>
+						<li class="tabla-row">33.3</li>
+						<li class="tabla-row">34</li>
+						<li class="tabla-row">34</li>
+						<li class="tabla-row">34.5</li>
+					</ul>
+				</div>
+				<div class="valores-result">
+					<ul class="tabla-column">
+						<li class="tabla-head">Bicep relax</li>
+						<li class="tabla-row">27.1</li>
+						<li class="tabla-row">28</li>
+						<li class="tabla-row">28.9</li>
+						<li class="tabla-row">28.8</li>
+					</ul>
+				</div>
+				<div class="valores-result">
+					<ul class="tabla-column">
+						<li class="tabla-head">Bicep flex</li>
+						<li class="tabla-row">28</li>
+						<li class="tabla-row">27</li>
+						<li class="tabla-row">27</li>
+						<li class="tabla-row">27</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
 			
 	</body>
 </html>

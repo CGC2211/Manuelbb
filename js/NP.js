@@ -1,8 +1,9 @@
 
 $(document).ready(function(){
+
   $("#tipodepaciente").change(function(){
-  	var paciente = $(this).val();
-  		switch(paciente){
+  	var valor = $(this).val();
+  		switch(valor){
   			case "Normal":
   				$(".normal").css("display","flex");
   				$(".normal").css("width",$('#generales').width() + 9 );
@@ -19,4 +20,11 @@ $(document).ready(function(){
   			break;
   		}
   });
+
 });
+function searchpaciente(){
+      var paciente = $('#inputsearch').val();
+
+      
+      $('.element-seguimiento-result').append()
+   };

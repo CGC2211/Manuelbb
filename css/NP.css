@@ -1,138 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
+
 /* Basic styling */
-* {
+*{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-body {
-  font-family: sans-serif;
-}
-nav {
-  background: #222;
-  padding: 5px 20px;
-}
-ul {
-  list-style-type: none;
-}
-a {
-  color: white;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-.logo a:hover {
-  text-decoration: none;
-}
-.menu li {
-  font-size: 16px;
-  padding: 15px 5px;
-  white-space: nowrap;
-}
-.logo a,
-.toggle a {
-  font-size: 20px;
-}
-.button.secondary {
-  border-bottom: 1px #444 solid;
-}
-/* Mobile menu */
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-.toggle {
-  order: 1;
-}
-.item.button {
-  order: 2;
-}
-.item {
-  width: 100%;
-  text-align: center;
-  order: 3;
-  display: none;
-}
-.item.active {
-  display: block;
+  
 }
 
-.normal h1{
-  font-size: large;
+li, a {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
 }
-/* Tablet menu */
-@media all and (min-width: 600px) {
-  .menu {
-    justify-content: center;
-  }
-  .logo {
-    flex: 1;
-  }
-  .toggle {
-    flex: 1;
-    text-align: right;
-  }
-  .item.button {
-    width: auto;
-    order: 1;
-    display: block;
-  }
-  .toggle {
-    order: 2;
-  }
-  .button.secondary {
-    border: 0;
-  }
-  .button a {
-    padding: 7.5px 15px;
-    background: teal;
-    border: 1px #006d6d solid;
-  }
-  .button.secondary a {
-    background: transparent;
-  }
-  .button a:hover {
-    text-decoration: none;
-  }
-  .button:not(.secondary) a:hover {
-    background: #006d6d;
-    border-color: #005959;
-  }
-  .button.secondary a:hover {
-    color: #ddd;
-  }
+
+header {
+  background: #24252A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
 }
-/* Desktop menu */
-@media all and (min-width: 900px) {
-  .item {
-    display: block;
-    width: auto;
-  }
-  .toggle {
-    display: none;
-  }
-  .logo {
-    order: 0;
-  }
-  .item {
-    order: 1;
-  }
-  .button {
-    order: 2;
-  }
-  .menu li {
-    padding: 15px 10px;
-  }
-  .menu li.button {
-    padding-right: 0;
-  }
+
+.logo{
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
 }
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-links li {
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: #0088a9;
+}
+
+/*mobile menu */
+@media all and (max-width: 400px){
+ header{
+   justify-content: space-around;
+ }
+
+ .logo{
+  width: 100px;
+ }
+
+ .nav-links{
+    flex-direction: column;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+  }
+} 
 
 
 #container{
-  display: flex;
+  /*display: flex;*/
+  display: none;
   flex-flow: column wrap;
   align-items: center;
   padding: 5px;
@@ -153,12 +91,14 @@ a:hover {
   -moz-box-shadow: 22px 21px 5px 6px rgba(0,0,0,0.75);
   box-shadow: 22px 21px 5px 6px rgba(0,0,0,0.75);
 }
+
 .element-general{
     margin: 5px;
     width: 100%;
     display: flex;
     flex-direction: row;
 }
+
 .element-general label{
     order: 1;
     width: 30%;
@@ -168,6 +108,7 @@ a:hover {
     width: 70%;
     order:2;
 }
+
 .element-general select {
     width: 70%;
     order:2;
@@ -184,8 +125,6 @@ a:hover {
     font-size: medium;
 }
 
-
-
 .normal{
   margin-top: 30px;
   padding: 5px;
@@ -201,13 +140,12 @@ a:hover {
     box-shadow: 22px 21px 5px 6px rgba(0,0,0,0.75);
 }
 
-
-
 .element-normal{
     width: 100%;
     display: flex;
     flex-direction: row;
 }
+
 .element-normal label{
     order: 1;
     width: 70%;
@@ -240,8 +178,6 @@ a:hover {
     box-shadow: 22px 21px 5px 6px rgba(0,0,0,0.75);
 }
 
-
-
 .element-deportista{
     padding: 5px;
     width: 100%;
@@ -266,6 +202,137 @@ a:hover {
 }
 
 
-/*.ocultos{
-  display: none;
-}*/
+/*Seguimiento*/
+#Seguimiento{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.element-seguimiento-search{
+  width: 400px;
+  display: flex;
+  margin-top: 10px;
+}
+
+.element-seguimiento-search input{
+  width: 70%;
+  border: 1px solid #b8b8b8;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.element-seguimiento-search input:focus{
+  outline: none !important;
+}
+
+.element-seguimiento-search button{
+  width: 30%;
+  border: none;
+  border-radius: 50px;
+  background: #00ccff;
+  color: #fff;
+  margin-left: 2%;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.element-seguimiento-search button:hover{
+  color: #256a9f;
+}
+
+.element-seguimiento-result{
+  display: flex;
+  padding: 16px;
+  width: 100%;
+}
+
+
+.valores-result{
+  flex: 1;
+  width: 0;
+}
+
+.valores-result:not(last-child){
+  margin-right: 10px;
+}
+
+.tabla-column{
+  border: 1px solid #eee;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: .5s;
+}
+
+.tabla-column:hover{
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.3);
+  transform: scale(1.05);
+}
+
+.tabla-column .tabla-head{
+  background: #0e908f;
+  color: #fff;
+  font-size: 12px;
+  font-family: "Roboto",sans-serif;
+}
+
+.tabla-column li{
+  background-color: #262626;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-family: poppins;
+}
+
+.valores-result:hover .tabla-column .tabla-head{
+  background-color: #f12e07;
+  transition: .9s;
+}
+
+@media only screen and (max-width: 767px){
+  .element-seguimiento-result{
+    flex-wrap: wrap;
+  }
+
+  .valores-result{
+    flex: 0 0 100%;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  .tabla-column:hover{
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  .element-seguimiento-result{
+    flex-wrap: wrap;
+  }
+
+  .valores-result{
+    flex: 0 0 20%;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
+
+/*ipad*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+    .tabla-column .tabla-head{
+      overflow-wrap: break-word;
+      font-size: 7px;
+    }
+    .tabla-column .tabla-row{
+      font-size: 10px;
+    }
+    .valores-result:not(last-child) {
+    margin-right: 5px;
+}
+  }
