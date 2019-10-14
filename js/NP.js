@@ -73,7 +73,8 @@ function generargrafica(){
 }   
 
 function generarpdf(){
-   var doc = new jsPDF();
+   var doc = new jsPDF('p', 'pt', 'letter');
+   source = $('.element-seguimiento-result')[0];
    var canvas = document.getElementById('myChart');
    var imgData = canvas.toDataURL("image/PNG", 1.0);
    var elementHTML = $('#Seguimiento').html();
@@ -81,11 +82,19 @@ function generarpdf(){
     '#elementH': function(element, renderer){
       return true;
     }
-   }
+   };
+   var margins = {
+                top: 80,
+                bottom: 60,
+                left: 40,
+                width: 522
+            };
 
-   doc.fromHTML(elementHTML, 15, 15,{
-      'width': 170,
-      'elementHandlers': specialElementHandlres
+   doc.fromHTML(source,
+        margins.left, // x coord
+        margins.top, {// y coord
+        'width': margins.width, // max width of content on PDF
+        'elementHandlers': specialElementHandlres
    });
    doc.addImage(imgData, 'JPEG', 10, 0);
 
