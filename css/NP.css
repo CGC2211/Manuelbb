@@ -292,6 +292,36 @@ header {
   transition: .9s;
 }
 
+.element-seguimiento-grafica{
+    display: flex;
+    padding: 16px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.element-seguimiento-button {
+  align-self: center;
+}    
+
+.element-seguimiento-button button{
+  border: none;
+  border-radius: 50px;
+  background: #00ccff;
+  color: #fff;
+  margin-left: 2%;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.element-seguimiento-button button:hover{
+  color: #256a9f;
+}
+
+.chart-container{
+  width: 400px;
+  height: 400px;
+}
+
 @media only screen and (max-width: 767px){
   .element-seguimiento-result{
     flex-wrap: wrap;
