@@ -12,7 +12,12 @@
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 		<!--jspdf.js-->
-		<script src="js/jspdf.js" type="text/javascript"></script>
+		<script src="js/jspdf.min.js" type="text/javascript"></script>
+		<script src="js/jspdf-autotable.js" type="text/javascript"></script>
+
+
+		<!--html2canvas-->
+		<script  src="js/html2canvas.js" type="text/javascript"></script>
 	</head>
 	<body>
 		
@@ -178,7 +183,7 @@
 			<div class="element-seguimiento-search">
 				<input type="text" id="inputsearch" placeholder="Ingrese Nombre del paciente"><button onclick="searchpaciente()">Buscar</button>
 			</div>
-			<div class="element-seguimiento-result">
+			<div class="element-seguimiento-result topdf">
 				<div class="valores-result">
 					<ul class="tabla-column">
 						<li class="tabla-head">Peso</li>
@@ -307,7 +312,7 @@
 				</div>
 			</div>
 
-			<div class="element-seguimiento-grafica">
+			<div class="element-seguimiento-grafica topdf">
 				<div class="element-seguimiento-button">
 					<button onclick="generargrafica()">Generar grafica</button>
 				</div>

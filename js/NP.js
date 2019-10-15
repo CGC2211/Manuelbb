@@ -73,7 +73,59 @@ function generargrafica(){
 }   
 
 function generarpdf(){
-   var doc = new jsPDF('p', 'pt', 'letter');
+  var canvas = document.getElementById('myChart');
+  var doc = new jsPDF('landscape','mm','letter');
+
+  var headersd = [];
+  $('.tabla-head').each(function(){
+    headersd.push($(this).text());
+  });
+
+  var contador = 0;
+  var datos = [];
+  var datosporcolumna = [];
+  $('.tabla-row').each(function(){
+    if(contador <=4){
+      datosporcolumna.push($(this).text());
+      contador++;
+    }
+    if(contador == 4){
+      datos.push(datosporcolumna);
+      datosporcolumna = [];
+      contador = 0;
+    }
+  });
+   var header = function (data) {
+                    doc.setFontSize(18);
+                    doc.setTextColor(40);
+                    doc.setFontStyle('normal');
+//doc.addImage(headerImgData, 'JPEG', data.settings.margin.left, 20, 50, 50);
+                    doc.text("Testing Report", data.settings.margin.left, 50);
+                };
+
+  console.log(headersd);
+  console.log(datos);
+    doc.autoTable(
+         headersd,
+         datos,
+         {margin: {top: 80}, didDrawPage : header}
+    );
+
+    var imgData = canvas.toDataURL("image/PNG", 1.0);
+    doc.addPage();
+    doc.addImage(imgData, 'JPEG', 10, 0);
+    doc.save('paciente.pdf');
+  /*var elem = document.getElementsByClassName("element-seguimiento-result");
+  var res = doc.autoTableHtmlToJson(elem);
+  var imgData = canvas.toDataURL("image/PNG", 1.0);
+  doc.autoTable(res.columns, res.data);
+  doc.addPage();
+  doc.addImage(imgData, 'JPEG', 10, 0);
+
+   doc.save('paciente.pdf');*/
+}
+
+/*var doc = new jsPDF('landscape');
    source = $('.element-seguimiento-result')[0];
    var canvas = document.getElementById('myChart');
    var imgData = canvas.toDataURL("image/PNG", 1.0);
@@ -96,7 +148,16 @@ function generarpdf(){
         'width': margins.width, // max width of content on PDF
         'elementHandlers': specialElementHandlres
    });
+   doc.addPage();
    doc.addImage(imgData, 'JPEG', 10, 0);
 
-   doc.save('paciente.pdf');
+   doc.save('paciente.pdf');*/
+
+function genpdf(){
+ html2canvas(document.getElementById('Seguimiento')).then(function(canvas) {
+                var img = canvas.toDataURL('image/png');
+                var doc = new jsPDF();
+                doc.addImage(img, 'JPEG', 0, 0);
+                doc.save('test.pdf');
+            });
 }
