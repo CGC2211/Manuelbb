@@ -1,4 +1,5 @@
 
+
 $(document).ready(function(){
 
   $("#tipodepaciente").change(function(){
@@ -81,10 +82,11 @@ function generarpdf(){
     headersd.push($(this).text());
   });
 
-  var contador = 0;
+ console.log($('.Peso').length);
+  var contador = 1;
   var datos = [];
   var datosporcolumna = [];
-  $('.tabla-row').each(function(){
+  /*$('.tabla-row').each(function(){
     if(contador <=4){
       datosporcolumna.push($(this).text());
       contador++;
@@ -94,7 +96,19 @@ function generarpdf(){
       datosporcolumna = [];
       contador = 0;
     }
-  });
+  });*/
+
+
+    for(contador = 1; contador <= $('.Peso').length; contador++){
+      var clase =   'valor-'+contador;
+      console.log( "loselementos " + clase + " " +  $('.'+clase).length);
+        $('.'+clase).each(function(){
+          datosporcolumna.push($(this).text());
+      })
+        datos.push(datosporcolumna);
+        datosporcolumna = [];
+    }
+    console.log(datos);
    var header = function (data) {
                     doc.setFontSize(18);
                     doc.setTextColor(40);
@@ -108,13 +122,23 @@ function generarpdf(){
     doc.autoTable(
          headersd,
          datos,
-         {margin: {top: 80}, didDrawPage : header}
+         {
+          margin: {top: 80}, 
+          didDrawPage : header,
+           theme: 'grid',
+            styles: {
+                fontSize: 6,
+                font: 'PTSans'
+            },
+        }
     );
 
+    var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+'-'+today.getSeconds();
     var imgData = canvas.toDataURL("image/PNG", 1.0);
     doc.addPage();
     doc.addImage(imgData, 'JPEG', 10, 0);
-    doc.save('paciente.pdf');
+    doc.save('paciente'+date+ '.pdf');
   /*var elem = document.getElementsByClassName("element-seguimiento-result");
   var res = doc.autoTableHtmlToJson(elem);
   var imgData = canvas.toDataURL("image/PNG", 1.0);
