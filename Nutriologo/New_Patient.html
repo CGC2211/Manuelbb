@@ -1,0 +1,198 @@
+﻿<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Nuevos Pacientes</title>
+		<link type="text/css" href="css/NP.css" rel="stylesheet">
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/NP.js" type="text/javascript"></script>
+		<!--<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript"></script>-->
+	</head>
+	<body>
+	<nav>
+		  <ul class="menu">
+		    <li class="logo"><a href="#">Invisible App</a></li>
+		    <li class="item"><a href="#">Nuevo Paciente</a></li>
+		    <li class="item"><a href="#">Seguimiento</a></li>
+		    <li class="item"><a href="#">Informe</a></li>
+		    <!--<li class="item"><a href="#">Features</a></li>
+		    <li class="item"><a href="#">Blog</a></li>
+		    <li class="item"><a href="#">Contact</a>
+		    </li>
+		    <li class="item button"><a href="#">Log In</a></li>
+		    <li class="item button secondary"><a href="#">Sign Up</a></li>-->
+		    <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+		  </ul>
+		</nav> 
+		<div id="container">
+			<form id="formgen">
+				<div id="geneales">
+					<h1>Datos Generales</h1>
+					<div class="element-general">
+						<label for="inputnombre">Nombre(s)</label>
+						<input class="inputsforms" type="text" id="inputnombre">
+					</div>	
+					<div class="element-general">
+						<label for="inputapellidos">Apellido Paterno</label>
+						<input class="inputsforms" type="text" id="inputapellidop">
+					</div>
+					<div class="element-general">
+						<label for="inputapellidos">Apellido Materno</label>
+						<input class="inputsforms" type="text" id="inputapellidom">
+					</div>
+					<div class="element-general">
+						<label for="inputedad">Edad</label>
+						<input class="inputsforms" type="number" id="inputedad">
+					</div>
+					<div class="element-general">
+						<label for="inputestatura" >Estatura</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputestatura">
+					</div>
+					<div class="element-general">
+						<label for="Sexo" >Sexo</label>
+						<select class="inputsforms" id="inputsexo">
+						<option value="default">Seleccione el sexo</option>
+						<option value="Masculino">Masculino</option>
+						<option value="Femenenino">Femenenino</option>
+						</select>
+					</div>
+					<div class="element-general">
+						<label for="tipodepaciente" >Tipo</label>
+						<select class="inputsforms" id="tipodepaciente">
+						<option value="default">Seleccione tipo de paciente</option>
+						<option value="Normal">Normal</option>
+						<option value="Deportista">Deportista</option>
+						</select>
+					</div>
+				</div>
+			</form>
+			
+
+			<div class="normal">
+					<h1> Paciente Normal</h1>
+					<div class="element-normal">
+						<label for="inputpeso">Peso</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputpeso">
+					</div>
+					<div class="element-normal">
+						<label for="inputcircin">Circunferencia de Cintura</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputcircin">
+					</div>
+					<div class="element-normal">
+						<label for="inputcircad">Circunferencia de cadera</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputcircad">
+					</div>
+					<div class="element-normal">
+						<label for="inputplibic">Pliegue de Bicep</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputplibic">
+					</div>
+					<div class="element-normal">
+						<label for="inputplitri">Pliegue de tricep</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputplitri">
+					</div>
+					<div class="element-normal">
+						<label for="inputgrabia">% De grasa por BIA </label>
+						<input class="inputsforms" type="double" step="0.01" id="inputgrabia">
+					</div>	
+					<div class="element-normal-submit">
+						<button id="btnsndnormal" type="button"> Enviar</button>	
+					</div>
+					
+			</div>
+
+			<div class="Deportista" >
+					<h1>Paciente Deportista</h1>
+					<div class="element-deportista">
+						<label for="inputpesod">Peso</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputpesod">
+					</div>
+					<div class="element-deportista">
+						<label for="inputbic">Bicep</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputbic">
+					</div>
+					<div class="element-deportista">
+						<label for="inputctri">Tricep</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputctri">
+					</div>
+					<div class="element-deportista">
+						<label for="inputsub">Subescapular</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputsub">
+					</div>
+					<div class="element-deportista">
+						<label for="inputcres">Cresta iliaca</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputcres">
+					</div>
+					<div class="element-deportista">
+						<label for="inputsup">Supra-espinoso</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputsup">
+					</div>
+					<div class="element-deportista">
+						<label for="inputabd">Abdominal</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputabd">
+					</div>		
+					<div class="element-deportista">
+						<label for="inputmus">Muslo medio</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputmus">
+					</div>	
+					<div class="element-deportista">
+						<label for="inputpan">Pantorilla</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputpan">
+					</div>	
+					<div class="element-deportista">
+						<label for="inputbicr">Bicep relax</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputbicr">
+					</div>	
+					<div class="element-deportista">
+						<label for="inputbicf">Bicep flex</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputbicf">
+					</div>	
+					<div class="element-deportista">
+						<label for="inputcinm">Cintura mínima</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputcinm">
+					</div>	
+					<div class="element-deportista">
+						<label for="inputcadm">Cadera máxima</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputcadm">
+					</div>	
+					<div class="element-deportista">
+						<label for="inputpanm">Pantorrila máxima</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputpanm">
+					</div>	
+					<div class="element-deportista">
+						<label for="inputhum">Húmero</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputhum">
+					</div>	
+					<div class="element-deportista">
+						<label for="inputfem">Femur</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputfem">
+					</div>	
+					<div class="element-deportista">
+						<label for="inputvo2">VO2Max</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputvo2">
+					</div>	
+					<div class="element-deportista">
+						<label for="inputrmb">Umbral Anaeróbico</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputrmb">
+					</div>	
+					<div class="element-deportista">
+						<label for="inputrms">1 RM Bench press</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputrms">
+					</div>	
+					<div class="element-deportista">
+						<label for="inputsup">1 RM Squat</label>
+						<input class="inputsforms" type="double" step="0.01" id="inputsup">
+					</div>		
+					<div class="element-deportista-submit">
+						<button id="btnsnddeportista" type="button"> Enviar</button>	
+					</div>
+					
+			</div>
+
+		</div>
+		
+			
+	</body>
+</html>

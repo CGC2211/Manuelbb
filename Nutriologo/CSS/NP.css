@@ -1,0 +1,278 @@
+/* Basic styling */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+}
+nav {
+  background: #222;
+  padding: 5px 20px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.logo a:hover {
+  text-decoration: none;
+}
+.menu li {
+  font-size: 16px;
+  padding: 15px 5px;
+  white-space: nowrap;
+}
+.logo a,
+.toggle a {
+  font-size: 20px;
+}
+.button.secondary {
+  border-bottom: 1px #444 solid;
+}
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle {
+  order: 1;
+}
+.item.button {
+  order: 2;
+}
+.item {
+  width: 100%;
+  text-align: center;
+  order: 3;
+  display: none;
+}
+.item.active {
+  display: block;
+}
+
+.normal h1{
+  font-size: large;
+}
+/* Tablet menu */
+@media all and (min-width: 600px) {
+  .menu {
+    justify-content: center;
+  }
+  .logo {
+    flex: 1;
+  }
+  .toggle {
+    flex: 1;
+    text-align: right;
+  }
+  .item.button {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+  .toggle {
+    order: 2;
+  }
+  .button.secondary {
+    border: 0;
+  }
+  .button a {
+    padding: 7.5px 15px;
+    background: teal;
+    border: 1px #006d6d solid;
+  }
+  .button.secondary a {
+    background: transparent;
+  }
+  .button a:hover {
+    text-decoration: none;
+  }
+  .button:not(.secondary) a:hover {
+    background: #006d6d;
+    border-color: #005959;
+  }
+  .button.secondary a:hover {
+    color: #ddd;
+  }
+}
+/* Desktop menu */
+@media all and (min-width: 900px) {
+  .item {
+    display: block;
+    width: auto;
+  }
+  .toggle {
+    display: none;
+  }
+  .logo {
+    order: 0;
+  }
+  .item {
+    order: 1;
+  }
+  .button {
+    order: 2;
+  }
+  .menu li {
+    padding: 15px 10px;
+  }
+  .menu li.button {
+    padding-right: 0;
+  }
+}
+
+
+#container{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 5px;
+}
+
+#geneales{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #9c9c9c;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: large;
+  margin-top: 10px;
+  border-radius: 10px 10px;
+  padding: 5px;
+  -webkit-box-shadow: 22px 21px 5px 6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 22px 21px 5px 6px rgba(0,0,0,0.75);
+  box-shadow: 22px 21px 5px 6px rgba(0,0,0,0.75);
+}
+.element-general{
+    margin: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.element-general label{
+    order: 1;
+    width: 45%;
+}
+
+.element-general input{
+    width: 55%;
+    order:2;
+}
+.element-general select {
+    width: 55%;
+    order:2;
+}
+
+.inputsforms{
+    height: 20px;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #a29e9e;
+    font-size: larger;
+}
+
+#tipodepaciente{
+    font-size: medium;
+}
+
+#inputsexo{
+  font-size: medium;
+}
+
+.errorclass{
+  border: 1px solid red;
+}
+
+.normal{
+  margin-top: 30px;
+  padding: 5px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #9c9c9c;
+  padding-bottom: 1em;
+  border-radius: 10px 10px;
+  -webkit-box-shadow: 22px 21px 5px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 22px 21px 5px 6px rgba(0,0,0,0.75);
+    box-shadow: 22px 21px 5px 6px rgba(0,0,0,0.75);
+}
+
+
+
+.element-normal{
+  margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.element-normal label{
+    order: 1;
+    width: 70%;
+}
+
+.element-normal input{
+    width: 20%;
+    order:2;
+}
+
+.element-normal-submit button{
+  border-radius: 5px;
+  color: #fefefe;
+  background: #00a1ff;
+  padding: 5px;
+}
+
+.Deportista{
+  margin-top: 30px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid #9c9c9c;
+  padding-bottom: 1em;
+  border-radius: 10px 10px;
+  -webkit-box-shadow: 22px 21px 5px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 22px 21px 5px 6px rgba(0,0,0,0.75);
+    box-shadow: 22px 21px 5px 6px rgba(0,0,0,0.75);
+}
+
+
+
+.element-deportista{
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.element-deportista label{
+    order: 1;
+    width: 40%;
+}
+
+.element-deportista input{
+    width: 40%;
+    order:2;
+}
+
+.element-deportista-submit button{
+  border-radius: 5px;
+  color: #fefefe;
+  background: #00a1ff;
+  padding: 5px;
+}
+
+
+/*.ocultos{
+  display: none;
+}*/
